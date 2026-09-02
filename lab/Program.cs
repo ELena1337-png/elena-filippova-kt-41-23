@@ -1,3 +1,5 @@
+using lab.Data;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
 
@@ -13,9 +15,11 @@ try
     // Add services to the container.
 
     builder.Services.AddControllers();
+    builder.Services.AddDbContext<StudentsDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
     // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
-   // builder.Services.AddOpenApi();
+    // builder.Services.AddOpenApi();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
