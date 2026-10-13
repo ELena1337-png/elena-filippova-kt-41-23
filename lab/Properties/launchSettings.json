@@ -10,8 +10,6 @@
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5243"
     },
-    "pplicationUrl\": \"http": //localhost:5243"
-  },
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,

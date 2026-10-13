@@ -12,8 +12,8 @@ using lab.Data;
 namespace lab.Migrations
 {
     [DbContext(typeof(StudentsDbContext))]
-    [Migration("20260902105827_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20261013140029_CreateDatabase1")]
+    partial class CreateDatabase1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

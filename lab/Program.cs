@@ -2,6 +2,7 @@ using lab.Data;
 using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
+using lab.ServicecExtensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +18,8 @@ try
     builder.Services.AddControllers();
     builder.Services.AddDbContext<StudentsDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-    // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
+    builder.Services.AddServices();
 
     // builder.Services.AddOpenApi();
     builder.Services.AddEndpointsApiExplorer();
